@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+.card{
+    min-width: 15vmin;
+    min-height: 15vmin;
+    margin: 2vmin;
+    position: relative;
+    transition: all 170ms linear;
+    transform-style: preserve-3d;
+}
+
+.front, .back{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vmin;
+    position: absolute;
+    border-radius: 2vmin;
+}
+
+.back{
+    background: linear-gradient(#ffc800, #00ff04);
+    z-index: 1;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+.front{
+    background: linear-gradient(#d000ff, #00fff6);
+    z-index: 2;
+    backface-visibility: hidden;
+}
+
+.contentcard:hover .card{
+    transform: rotateY(180deg);
+}
+card:hover{
+    transform: rotate(180deg);
+}
+.grid{
+    padding: 1vmin;
+    display: flex;
+    background: rgba(119, 0, 255, 0.18);
+    justify-content: space-around;
+    align-content: center;
+    border-radius: 4vmin;
+    Flex-wrap: wrap;
+    max-width: 65vmin;
+    backface-visibility: hidden;
+
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-image: url("img.png");
+    background-position: top;
+}
+.content{
+    display: flex;
+    width: 70%;
+    flex-wrap: wrap;
+    justify-content: center
+}
+.main_title{
+    top: 10px;
+    margin: 2vmin 0 4vmin 0;
+    background: rgba(0, 216, 254, 0.56);
+    text-align: center;
+    width: 100%;
+    border-radius: 6vmin;
+    position: sticky;
+}
+
+.contentcard{
+    perspective: 1000px;
+}
+
+
